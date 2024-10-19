@@ -1,0 +1,88 @@
+{
+  "main": {
+    "id": "00e06769842d01d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8ccb290476ca19c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "misc./movies.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5b51340e321e28bf",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "8b1be897cfb698b6",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "384aef396782521a",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "951b70a9f4b02daa",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "9d39dc496ff52b5c",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "misc./movies.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "c8ccb290476ca19c",
+  "lastOpenFiles": [
+    "react-context.md",
+    "projects.md",
+    "misc./tashny.md",
+    "Untitled.md",
+    "interintellect/sharing-your-narrative.md",
+    "art/youtube/libson-first-impressions.md",
+    "art/youtube/extras.md",
+    "art/youtube/a dance in rauland.md",
+    "art/youtube/swim.md",
+    "art/youtube/journey west.md"
+  ]
+}
