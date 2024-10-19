@@ -1,0 +1,10 @@
+{
+  "baseFontSize": 16,
+  "theme": "obsidian",
+  "accentColor": "#828282",
+  "enabledCssSnippets": [
+    "snippet"
+  ],
+  "showViewHeader": false,
+  "nativeMenus": true
+}
