@@ -2,6 +2,6 @@
 
 Tim's configs
 
-- [ ] curosor 
+- [ ] cursor
 - [x] .obsidian 
 - [x] .zshrc 
