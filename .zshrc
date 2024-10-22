@@ -25,6 +25,8 @@ alias hyper='cd ~/repos/hypertext-collective; c .'
 alias perth='cd ~/repos/perth; c .'
 alias birdseye='c ~/repos/birds-eye-2'
 
+# scripts
+alias hugo-update='~/repos/scripts/hugo-build-and-push.sh'
 
 # Servers 
 alias arrakis='ssh root@64.227.118.57'
@@ -35,9 +37,9 @@ alias src='source ~/.zshrc; echo "ZSH aliases sourced."'
 alias check-configs='~/repos/scripts/check-configs.sh'
 
 # Run check-configs on startup
-
 ~/repos/scripts/check-configs.sh
 ~/repos/configs/check-visions.sh
+
 
 # git 
 alias g-tree='git log --graph --pretty=oneline --abbrev-commit'
@@ -55,3 +57,4 @@ export NVM_DIR="$HOME/.nvm"
 
   export LC_ALL=en_US.UTF-8
 
+alias hugo-update='~/repos/scripts/hugo-build-and-push.sh'
