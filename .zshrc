@@ -33,7 +33,7 @@ alias check-configs='~/repos/scripts/check-configs.sh'
 
 # Run check-configs on startup
 ~/repos/scripts/check-configs.sh
-~/repos/scripts/check-visions.sh
+~/repos/configs/check-visions.sh
 
 # git 
 alias g-tree='git log --graph --pretty=oneline --abbrev-commit'
