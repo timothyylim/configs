@@ -28,6 +28,7 @@ alias arrakis='ssh root@64.227.118.57'
 # Configs 
 alias config='vim ~/.zshrc'
 alias src='source ~/.zshrc; echo "ZSH aliases sourced."'
+alias check-configs='~/repos/scripts/check-configs.sh'
 
 # git 
 alias g-tree='git log --graph --pretty=oneline --abbrev-commit'
