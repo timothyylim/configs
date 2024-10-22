@@ -3,7 +3,7 @@ premd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-# Prompt
+# Prompt!
 COLOR_DEF=$'%f'
 COLOR_USR=$'%F{243}'
 COLOR_DIR=$'%F{197}'
