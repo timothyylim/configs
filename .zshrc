@@ -22,7 +22,7 @@ alias tim='cd ~/repos/timothylim.is/; c .'
 alias wiki='cd ~/repos/tpot.wiki/; c .'
 alias hyper='cd ~/repos/hypertext-collective; c .'
 alias perth='cd ~/repos/perth; c .'
-alias birdseye='c ~/repos/birdseye-2'
+alias birdseye='c ~/repos/birds-eye-2'
 
 # Servers 
 alias arrakis='ssh root@64.227.118.57'
