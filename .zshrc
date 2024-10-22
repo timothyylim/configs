@@ -15,6 +15,7 @@ export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%2~ ${COLOR_GIT}$(parse_git_branch)${C
 alias vim='nvim'
 alias t='trans en:de'
 alias c='cursor'
+alias rm='mv -t ~/.Trash'
 
 # projects 
 alias tim='cd ~/repos/timothylim.is/; c .'
@@ -32,6 +33,7 @@ alias check-configs='~/repos/scripts/check-configs.sh'
 
 # Run check-configs on startup
 ~/repos/scripts/check-configs.sh
+~/repos/scripts/check-visions.sh
 
 # git 
 alias g-tree='git log --graph --pretty=oneline --abbrev-commit'
