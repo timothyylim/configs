@@ -57,4 +57,3 @@ export NVM_DIR="$HOME/.nvm"
 
   export LC_ALL=en_US.UTF-8
 
-alias hugo-update='~/repos/scripts/hugo-build-and-push.sh'
