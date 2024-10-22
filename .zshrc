@@ -35,6 +35,7 @@ alias src='source ~/.zshrc; echo "ZSH aliases sourced."'
 alias check-configs='~/repos/scripts/check-configs.sh'
 
 # Run check-configs on startup
+
 ~/repos/scripts/check-configs.sh
 ~/repos/configs/check-visions.sh
 
