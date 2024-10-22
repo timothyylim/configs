@@ -26,7 +26,7 @@ alias perth='cd ~/repos/perth; c .'
 alias birdseye='c ~/repos/birds-eye-2'
 
 # scripts
-alias hugo-update='~/repos/scripts/hugo-build-and-push.sh'
+alias hugo-update='hugo-build-and-push.sh'
 
 # Servers 
 alias arrakis='ssh root@64.227.118.57'
