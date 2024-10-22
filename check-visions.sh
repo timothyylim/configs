@@ -20,16 +20,16 @@ cd "$REPO_PATH" || exit 1
 echo "Checking for changes in $REPO_PATH..."
 
 # Check for changes
-if git status --porcelain | grep .; then
+if git status --porcelain | grep -q .; then
     echo "Changes detected. Adding files..."
     
     # Add all changes
-    git add .
+    git add . > /dev/null 2>&1
     
     echo "Committing changes..."
     
     # Commit changes
-    git commit -m "update visions"
+    git commit -m "update visions" > /dev/null 2>&1
     
     echo "Changes committed successfully."
     
@@ -40,7 +40,7 @@ if git status --porcelain | grep .; then
     echo "Pushing changes to remote repository..."
     
     # Push changes
-    if git push; then
+    if git push > /dev/null 2>&1; then
         echo "Changes pushed successfully."
     else
         echo "Failed to push changes. Please check your network connection and remote repository settings."
