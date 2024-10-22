@@ -30,6 +30,9 @@ alias config='vim ~/.zshrc'
 alias src='source ~/.zshrc; echo "ZSH aliases sourced."'
 alias check-configs='~/repos/scripts/check-configs.sh'
 
+# Run check-configs on startup
+~/repos/scripts/check-configs.sh
+
 # git 
 alias g-tree='git log --graph --pretty=oneline --abbrev-commit'
 function parse_git_branch() {
