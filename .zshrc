@@ -16,7 +16,7 @@ alias vim='nvim'
 alias t='trans en:de'
 alias c='cursor'
 alias rm='mv -t ~/.Trash'
-alias z="c ~/repos/configs/.zshrc; source ~/.zshrc"
+alias z="c ~/repos/configs/.zshrc"
 
 # projects 
 alias tim='cd ~/repos/timothylim.is/; c .'
