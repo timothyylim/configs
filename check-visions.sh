@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Check if the script is being sourced
+(return 0 2>/dev/null) && sourced=1 || sourced=0
+
+# If the script is sourced, don't execute the main functionality
+if [ $sourced -eq 1 ]; then
+    echo "Script is being sourced. Skipping execution."
+    return 0
+fi
+
+# Main script functionality
 # Set the repository path
 REPO_PATH="$HOME/repos/visions"
 
