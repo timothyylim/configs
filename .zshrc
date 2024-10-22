@@ -15,7 +15,7 @@ export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%2~ ${COLOR_GIT}$(parse_git_branch)${C
 alias vim='nvim'
 alias t='trans en:de'
 alias c='cursor'
-alias rm='mv -t ~/.Trash'
+# alias rm='mv -t ~/.Trash'
 alias z="c ~/repos/configs/.zshrc"
 
 # projects 
