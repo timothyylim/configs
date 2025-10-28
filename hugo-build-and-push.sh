@@ -9,7 +9,23 @@ if [ $sourced -eq 1 ]; then
     return 0
 fi
 
-echo "Building Hugo site..."
+# Check if a directory is passed as an argument
+if [ -z "$1" ]; then
+    echo "No directory provided. Usage: ./script.sh <directory>"
+    exit 1
+fi
+
+# Navigate to the specified directory
+DIRECTORY="$1"
+
+if [ ! -d "$DIRECTORY" ]; then
+    echo "The specified directory does not exist: $DIRECTORY"
+    exit 1
+fi
+
+cd "$DIRECTORY" || { echo "Failed to navigate to directory: $DIRECTORY"; exit 1; }
+
+echo "Building Hugo site in $DIRECTORY..."
 hugo
 
 echo "Checking for changes..."
