@@ -1,0 +1,21 @@
+import = [
+  "~/.config/alacritty/themes/solarized-dark.toml"
+]
+
+[window]
+decorations = "full"
+opacity = 1.0
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Regular"
+
+[cursor.style]
+shape = "Block"
+blinking = "Off"
+
+[scrolling]
+history = 10000
