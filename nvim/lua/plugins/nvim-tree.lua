@@ -13,7 +13,7 @@ return {
       },
       update_focused_file = {
         enable = true, -- Follow current file
-        update_cwd = true,
+        update_cwd = false,
       },
       renderer = {
         group_empty = true, -- Collapse empty folders
@@ -39,15 +39,8 @@ return {
         local function opts(desc)
           return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
         end
+        -- Use default nvim-tree mappings
         api.config.mappings.default_on_attach(bufnr)
-        -- Custom mapping to open file in right pane
-        vim.keymap.set("n", "<CR>", function()
-          local node = api.tree.get_node_under_cursor()
-          vim.cmd("wincmd l") -- Move to right window
-          api.node.open.edit(node) -- Open file in right window
-        end, opts("Open in right pane"))
-        -- Custom mapping to hide/close tree
-        vim.keymap.set("n", "<leader>h", api.tree.close, opts("Close tree"))
       end,
     })
 

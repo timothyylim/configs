@@ -14,6 +14,9 @@ return require("lazy").setup({
                 highlight = {
                     enable = true,
                 },
+                fold = {
+                    enable = false,
+                },
             })
         end,
     },

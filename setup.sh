@@ -26,8 +26,15 @@ link_config() {
 
 # Create symlinks
 link_config "$CONFIGS_DIR/nvim" "$HOME/.config/nvim"
+link_config "$CONFIGS_DIR/alacritty" "$HOME/.config/alacritty"
 link_config "$CONFIGS_DIR/.zshrc" "$HOME/.zshrc"
 link_config "$CONFIGS_DIR/.tmux.conf" "$HOME/.tmux.conf"
+
+# Make tmux scripts executable
+if [[ -d "$CONFIGS_DIR/.tmux/scripts" ]]; then
+    chmod +x "$CONFIGS_DIR"/.tmux/scripts/*.sh 2>/dev/null || true
+    echo "✓ Made tmux scripts executable"
+fi
 
 echo ""
 echo "✅ Setup complete!"
