@@ -1,11 +1,15 @@
 [general]
 import = [
-  "~/.config/alacritty/themes/solarized-dark.toml"
+  "~/.config/alacritty/themes/solarized-light.toml"
 ]
 
 [window]
 decorations = "full"
 opacity = 1.0
+
+[window.padding]
+x = 16
+y = 16
 
 [font]
 size = 14.0

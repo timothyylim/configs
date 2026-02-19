@@ -149,13 +149,26 @@ alias glol='git log --graph --oneline --decorate'
 alias grv='git remote -v'
 alias gd='git diff'
 
+# --- Server Aliases ---
+alias sssh='ssh stevenmalim@100.117.74.26'
+
 # --- Utility Aliases ---
 alias wk='date +%V'
 alias pw='watch -n 10 pomodoro status'
+
+# Pomodoro function to use visions directory
+pomodoro() {
+    command pomodoro --directory "$HOME/repos/visions/misc/pomodoro" "$@"
+}
 alias gf="gemini --model 'gemini-2.5-flash'"
 alias g="gemini"
 alias ls='eza -1'
-alias lsl='eza'
+alias lss='eza --tree --level=1'
+alias lsss='eza --tree --level=2'
+alias lssss='eza --tree --level=3'
+alias tt='~/.config/alacritty/toggle-theme.sh'
+alias tt='~/.config/alacritty/toggle-theme.sh'
+alias tn='tmux new-window'
 
 # --- Functions ---
 
@@ -196,6 +209,11 @@ hp() {
     fi
 }
 
+# Tree with flexible depth (t)
+t() {
+    tree -L ${1:-1}  # Defaults to 1 if no argument given
+}
+
 
 # ====================================================================
 # 6. KEY BINDINGS & COMPLETION
@@ -219,3 +237,5 @@ export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export AGENTMAIL_API_KEY=am_29c0dfff19e4da339da8289fcc743798723ed9da1cf4ae03c84c8f7b75d6b8d9
 export AGENTMAIL_API_KEY=am_29c0dfff19e4da339da8289fcc743798723ed9da1cf4ae03c84c8f7b75d6b8d9
+export CLOUDSDK_PYTHON=/opt/homebrew/bin/python3
+export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"

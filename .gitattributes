@@ -1,0 +1,8 @@
+# Mark tmux scripts as executable
+.tmux/scripts/** text eol=lf diff=bash
+*.sh text eol=lf diff=bash
+
+# Explicitly mark executables
+.tmux/scripts/*.sh export-ignore text eol=lf
+setup.sh export-ignore
+hugo-build-and-push.sh export-ignore
