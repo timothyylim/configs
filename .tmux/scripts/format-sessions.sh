@@ -9,7 +9,7 @@ while read session; do
     habitat) echo "◈ $session" ;;        # diamond (tree/nature)
     hyperspeed) echo "⚡ $session" ;;     # lightning
     thibault) echo "⚜ $session" ;;       # fleur-de-lis
-    totormis) echo "⬢ $session" ;;      # hexagon (tech/server)
+    totormis) echo "▭ $session" ;;      # rectangle (computer/box)
     visions) echo "◉ $session" ;;        # eye
     *) echo "$session" ;;
   esac
