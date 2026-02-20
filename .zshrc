@@ -131,8 +131,8 @@ alias config='nvim ~/.zshrc'
 
 # --- Editor Aliases ---
 alias v='nvim'
-alias c='cursor'
 alias nconf='nvim ~/.config/nvim/init.lua'
+
 alias changkat='v /Users/tim/repos/writing/changkat/content/posts'
 alias diary='${EDITOR} ~/repos/notes/diary-$(date +%Y-%m-%d).md'
 alias scratch='${EDITOR} ~/repos/scratch/$(date +%Y-%m-%d).md'
@@ -150,7 +150,7 @@ alias grv='git remote -v'
 alias gd='git diff'
 
 # --- Server Aliases ---
-alias sssh='ssh stevenmalim@100.117.74.26'
+alias sssh='ssh stevenmalim@192.168.0.10'
 
 # --- Utility Aliases ---
 alias wk='date +%V'
@@ -160,8 +160,16 @@ alias pw='watch -n 10 pomodoro status'
 pomodoro() {
     command pomodoro --directory "$HOME/repos/visions/misc/pomodoro" "$@"
 }
+
+# Quick pomodoro start with session name and tags
+p() {
+    pomodoro start "$1" -t "${@:2}"
+}
+
 alias gf="gemini --model 'gemini-2.5-flash'"
 alias g="gemini"
+alias c="claude --continue"
+alias cc="claude"
 alias ls='eza -1'
 alias lss='eza --tree --level=1'
 alias lsss='eza --tree --level=2'
@@ -239,3 +247,4 @@ export AGENTMAIL_API_KEY=am_29c0dfff19e4da339da8289fcc743798723ed9da1cf4ae03c84c
 export AGENTMAIL_API_KEY=am_29c0dfff19e4da339da8289fcc743798723ed9da1cf4ae03c84c8f7b75d6b8d9
 export CLOUDSDK_PYTHON=/opt/homebrew/bin/python3
 export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"
+
