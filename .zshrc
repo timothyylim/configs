@@ -166,8 +166,6 @@ p() {
     pomodoro start "$1" -t "${@:2}"
 }
 
-alias gf="gemini --model 'gemini-2.5-flash'"
-alias g="gemini"
 alias c="claude --continue"
 alias cc="claude"
 alias ls='eza -1'
