@@ -5,6 +5,7 @@ while read session; do
     alexis) echo "✦ $session" ;;         # sparkle
     bifrost) echo "❄ $session" ;;        # snowflake
     config) echo "⚙ $session" ;;         # gear
+    configs) echo "⚙ $session" ;;        # gear
     ethstrat) echo "⊙ $session" ;;       # circle (network node)
     habitat) echo "◈ $session" ;;        # diamond (tree/nature)
     hyperspeed) echo "⚡ $session" ;;     # lightning
