@@ -11,7 +11,7 @@ while read session; do
     habitat) echo "◈ $session" ;;
     hyperspeed) echo "⚡ $session" ;;
     thibault) echo "⚜ $session" ;;
-    totormis) echo "🤖 $session" ;;
+    totormis) echo "⬢ $session" ;;
     visions) echo "◉ $session" ;;
     *) echo "$session" ;;
   esac
