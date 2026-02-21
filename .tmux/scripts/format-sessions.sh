@@ -4,8 +4,8 @@ while read session; do
   case "$session" in
     alexis) echo "✦ $session" ;;         # sparkle
     bifrost) echo "❄ $session" ;;        # snowflake
-    config) echo "⚙ $session" ;;         # gear
-    configs) echo "⚒ $session" ;;        # hammer & pickaxe
+    config) echo "◈ $session" ;;         # diamond
+    configs) echo "◈ $session" ;;        # diamond
     ethstrat) echo "⊙ $session" ;;       # circle (network node)
     habitat) echo "◈ $session" ;;        # diamond (tree/nature)
     hyperspeed) echo "⚡ $session" ;;     # lightning
