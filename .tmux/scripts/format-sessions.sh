@@ -2,17 +2,17 @@
 
 while read session; do
   case "$session" in
-    alexis) echo "✦ $session" ;;         # sparkle
-    bifrost) echo "❄ $session" ;;        # snowflake
-    config) echo "◈ $session" ;;         # diamond
-    confg) echo "◈ $session" ;;          # diamond
-    configs) echo "◈ $session" ;;        # diamond
-    ethstrat) echo "⊙ $session" ;;       # circle (network node)
-    habitat) echo "◈ $session" ;;        # diamond (tree/nature)
-    hyperspeed) echo "⚡ $session" ;;     # lightning
-    thibault) echo "⚜ $session" ;;       # fleur-de-lis
-    totormis) echo "▭ $session" ;;      # rectangle (computer/box)
-    visions) echo "◉ $session" ;;        # eye
+    alexis) echo "✦ $session" ;;
+    bifrost) echo "❄ $session" ;;
+    config) echo "◈ $session" ;;
+    confg) echo "⚒ $session" ;;
+    configs) echo "◈ $session" ;;
+    ethstrat) echo "⊙ $session" ;;
+    habitat) echo "◈ $session" ;;
+    hyperspeed) echo "⚡ $session" ;;
+    thibault) echo "⚜ $session" ;;
+    totormis) echo "▭ $session" ;;
+    visions) echo "◉ $session" ;;
     *) echo "$session" ;;
   esac
 done
