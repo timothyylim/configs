@@ -132,7 +132,13 @@ alias config='nvim ~/.zshrc'
 # --- Editor Aliases ---
 alias v='nvim'
 alias nconf='nvim ~/.config/nvim/init.lua'
-alias obsidian='open -a Obsidian'
+obsidian() {
+    if [[ -z "$1" ]]; then
+        open -a Obsidian
+    else
+        open -a Obsidian "$@"
+    fi
+}
 
 alias changkat='v /Users/tim/repos/writing/changkat/content/posts'
 alias diary='${EDITOR} ~/repos/notes/diary-$(date +%Y-%m-%d).md'
