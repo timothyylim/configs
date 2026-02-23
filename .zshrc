@@ -136,7 +136,12 @@ obsidian() {
     if [[ -z "$1" ]]; then
         open -a Obsidian
     else
-        open -a Obsidian "$@"
+        # Convert to absolute path
+        local file="$1"
+        if [[ ! "$file" = /* ]]; then
+            file="$(cd "$(dirname "$file")" && pwd)/$(basename "$file")"
+        fi
+        open -a Obsidian "$file"
     fi
 }
 
