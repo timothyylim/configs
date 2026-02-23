@@ -32,8 +32,8 @@ draw_city "tokyo" "$tokyo_hour" "Asia/Tokyo"
 draw_city "sydney" "$sydney_hour" "Australia/Sydney"
 
 # Timeline footer
-echo "                   |-----|-----|-----|-----|"
-echo "                   0     6     12    18    24"
+echo "                   |--------|--------|--------|--------|"
+echo "                   0        6        12       18       24"
 echo ""
 echo ""
 echo ""
