@@ -5,6 +5,7 @@ atlanta_hour=$(TZ=America/New_York date '+%H' | sed 's/^0//')
 oslo_hour=$(TZ=Europe/Oslo date '+%H' | sed 's/^0//')
 jakarta_hour=$(TZ=Asia/Jakarta date '+%H' | sed 's/^0//')
 kuala_lumpur_hour=$(TZ=Asia/Kuala_Lumpur date '+%H' | sed 's/^0//')
+tokyo_hour=$(TZ=Asia/Tokyo date '+%H' | sed 's/^0//')
 sydney_hour=$(TZ=Australia/Sydney date '+%H' | sed 's/^0//')
 
 echo ""
@@ -17,7 +18,7 @@ draw_city() {
     local pos=$((hour * 5 / 6))  # Map 0-23 hours to 0-50 chars roughly
     local line=$(printf '%*s' $((pos + 2)) | tr ' ' '-')
     local time=$(TZ=$tz date '+%H:%M')
-    printf "  %-15s%s*  %s\n" "$name" "$line" "$time"
+    printf "    %-15s%s*  %s\n" "$name" "$line" "$time"
 }
 
 draw_city "atlanta" "$atlanta_hour" "America/New_York"
@@ -29,6 +30,6 @@ draw_city "sydney" "$sydney_hour" "Australia/Sydney"
 
 # Timeline footer
 echo ""
-echo "                0     6     12    18    24"
-echo "                |-----|-----|-----|-----|"
+echo "                    0     6     12    18    24"
+echo "                    |-----|-----|-----|-----|"
 echo ""
