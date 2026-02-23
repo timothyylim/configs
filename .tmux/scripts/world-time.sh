@@ -33,7 +33,7 @@ draw_city "sydney" "$sydney_hour" "Australia/Sydney"
 
 # Timeline footer (1 char per hour, 24 hours total)
 echo "                   0    6    12   18   24"
-echo "                   |----|----|----|----|"
+echo "                   |----|----|----|----|---|"
 echo ""
 echo ""
 echo ""
