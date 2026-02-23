@@ -18,7 +18,7 @@ draw_city() {
     local name=$1
     local hour=$2
     local tz=$3
-    local pos=$((hour * 5 / 6))  # Map 0-23 hours to 0-50 chars roughly
+    local pos=$((hour * 2))  # Map 0-23 hours to 0-46 chars (2 per hour)
     local line=$(printf '%*s' $((pos + 2)) | tr ' ' '-')
     local time=$(TZ=$tz date '+%H:%M')
     printf "    %-15s%s*  %s\n" "$name" "$line" "$time"
