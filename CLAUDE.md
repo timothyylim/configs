@@ -208,3 +208,31 @@ source ~/.zshrc
 - Symlinks allow editing in `~/repos/configs/` with changes taking effect immediately
 - Theme toggle updates both Alacritty and tmux simultaneously
 - `setup.sh` backs up existing configs to `.bak` before symlinking
+
+## Development Guidelines for Future LLMs
+
+**CRITICAL:** Always keep code and scripts in the configs repository, then symlink them to their active locations.
+
+### Rule: Store Code in Configs, Symlink Everywhere
+
+1. **All scripts go in `~/repos/configs/`** (never edit files outside the repo directory)
+   - Shell scripts → `.tmux/scripts/`, `alacritty/`, or subdirectories
+   - Config files → root or organized subdirectories
+   - Documentation → This repo only
+
+2. **Use `setup.sh` to create symlinks** instead of manually copying files
+   - Add new symlink entries to `setup.sh` for new directories
+   - Example: `link_config "$CONFIGS_DIR/.tmux/scripts" "$HOME/.tmux/scripts"`
+   - Run `./setup.sh` after adding new symlinks
+
+3. **Never manually copy files to `~/.`**
+   - Don't copy scripts to `~/.tmux/scripts/`, `~/.config/`, etc.
+   - Always edit in `~/repos/configs/` and rely on symlinks
+   - If you must test before symlinking, copy TO the repo location, then symlink
+
+4. **Test and commit from the repo**
+   - Changes are immediately live via symlinks
+   - Always commit and push to keep repo in sync
+   - Document new scripts/directories in this file and `setup.sh`
+
+This ensures all configurations are version-controlled, portable across machines, and easy to manage.
