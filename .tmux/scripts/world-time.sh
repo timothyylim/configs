@@ -7,10 +7,7 @@ jakarta_hour=$(TZ=Asia/Jakarta date '+%H' | sed 's/^0//')
 kuala_lumpur_hour=$(TZ=Asia/Kuala_Lumpur date '+%H' | sed 's/^0//')
 sydney_hour=$(TZ=Australia/Sydney date '+%H' | sed 's/^0//')
 
-# Timeline header
 echo ""
-echo "                0     6     12    18    24"
-echo "                |-----|-----|-----|-----|"
 
 # Function to draw a city on the timeline
 draw_city() {
@@ -27,6 +24,11 @@ draw_city "atlanta" "$atlanta_hour" "America/New_York"
 draw_city "oslo" "$oslo_hour" "Europe/Oslo"
 draw_city "jakarta" "$jakarta_hour" "Asia/Jakarta"
 draw_city "kuala lumpur" "$kuala_lumpur_hour" "Asia/Kuala_Lumpur"
+draw_city "tokyo" "$tokyo_hour" "Asia/Tokyo"
 draw_city "sydney" "$sydney_hour" "Australia/Sydney"
 
+# Timeline footer
+echo ""
+echo "                0     6     12    18    24"
+echo "                |-----|-----|-----|-----|"
 echo ""
