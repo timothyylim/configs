@@ -17,16 +17,18 @@ echo "                |-----|-----|-----|-----|"
 draw_city() {
     local name=$1
     local hour=$2
+    local tz=$3
     local pos=$((hour * 5 / 6))  # Map 0-23 hours to 0-50 chars roughly
     local line=$(printf '%*s' $((pos + 2)) | tr ' ' '-')
-    printf "  %-15s%s*\n" "$name" "$line"
+    local time=$(TZ=$tz date '+%H:%M')
+    printf "  %-15s%s*  %s\n" "$name" "$line" "$time"
 }
 
-draw_city "atlanta" "$atlanta_hour"
-draw_city "oslo" "$oslo_hour"
-draw_city "jakarta" "$jakarta_hour"
-draw_city "kuala lumpur" "$kuala_lumpur_hour"
-draw_city "tokyo" "$tokyo_hour"
-draw_city "sydney" "$sydney_hour"
+draw_city "atlanta" "$atlanta_hour" "America/New_York"
+draw_city "oslo" "$oslo_hour" "Europe/Oslo"
+draw_city "jakarta" "$jakarta_hour" "Asia/Jakarta"
+draw_city "kuala lumpur" "$kuala_lumpur_hour" "Asia/Kuala_Lumpur"
+draw_city "tokyo" "$tokyo_hour" "Asia/Tokyo"
+draw_city "sydney" "$sydney_hour" "Australia/Sydney"
 
 echo ""
