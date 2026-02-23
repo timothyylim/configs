@@ -29,6 +29,7 @@ link_config "$CONFIGS_DIR/nvim" "$HOME/.config/nvim"
 link_config "$CONFIGS_DIR/alacritty" "$HOME/.config/alacritty"
 link_config "$CONFIGS_DIR/.zshrc" "$HOME/.zshrc"
 link_config "$CONFIGS_DIR/.tmux.conf" "$HOME/.tmux.conf"
+link_config "$CONFIGS_DIR/.tmux/scripts" "$HOME/.tmux/scripts"
 
 # Make tmux scripts executable
 if [[ -d "$CONFIGS_DIR/.tmux/scripts" ]]; then
