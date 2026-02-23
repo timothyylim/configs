@@ -8,6 +8,9 @@ kuala_lumpur_hour=$(TZ=Asia/Kuala_Lumpur date '+%H' | sed 's/^0//')
 tokyo_hour=$(TZ=Asia/Tokyo date '+%H' | sed 's/^0//')
 sydney_hour=$(TZ=Australia/Sydney date '+%H' | sed 's/^0//')
 
+# Add vertical centering padding
+echo ""
+echo ""
 echo ""
 
 # Function to draw a city on the timeline
@@ -32,4 +35,6 @@ draw_city "sydney" "$sydney_hour" "Australia/Sydney"
 echo ""
 echo "                    0     6     12    18    24"
 echo "                    |-----|-----|-----|-----|"
+echo ""
+echo ""
 echo ""
