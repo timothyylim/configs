@@ -7,9 +7,9 @@ icons=(
     "🚀" "🛸" "🎸" "🎹" "🎺" "🎻" "📚" "🔬" "⚙️"
 )
 
-# Medicinal icons
+# Medicinal icons (unicode symbols)
 medicinal=(
-    "💊" "💉" "🏥" "⚕️" "🩺" "🧬" "🦠" "🧪" "📋"
+    "⚕" "♨" "⟨⟩" "✚" "⧬" "⬚" "◈" "⬟" "▣"
 )
 
 # Check if we're backfilling (session name provided as argument)
