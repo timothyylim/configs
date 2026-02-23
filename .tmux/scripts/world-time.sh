@@ -9,8 +9,8 @@ sydney_hour=$(TZ=Australia/Sydney date '+%H' | sed 's/^0//')
 
 # Timeline header
 echo ""
-echo "  0     6     12    18    24"
-echo "  |-----|-----|-----|-----|"
+echo "                0     6     12    18    24"
+echo "                |-----|-----|-----|-----|"
 
 # Function to draw a city on the timeline
 draw_city() {
