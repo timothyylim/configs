@@ -132,6 +132,7 @@ alias config='nvim ~/.zshrc'
 # --- Editor Aliases ---
 alias v='nvim'
 alias nconf='nvim ~/.config/nvim/init.lua'
+alias obsidian='open -a Obsidian'
 
 alias changkat='v /Users/tim/repos/writing/changkat/content/posts'
 alias diary='${EDITOR} ~/repos/notes/diary-$(date +%Y-%m-%d).md'
@@ -150,7 +151,14 @@ alias grv='git remote -v'
 alias gd='git diff'
 
 # --- Server Aliases ---
-alias sssh='ssh stevenmalim@192.168.0.10'
+sssh() {
+    local ip=$(tailscale status | grep "stevens-mac-mini" | awk '{print $1}')
+    if [ -z "$ip" ]; then
+        echo "Error: Could not find stevens-mac-mini in tailscale status"
+        return 1
+    fi
+    ssh stevenmalim@"$ip"
+}
 
 # --- Utility Aliases ---
 alias wk='date +%V'
@@ -246,3 +254,4 @@ export AGENTMAIL_API_KEY=am_29c0dfff19e4da339da8289fcc743798723ed9da1cf4ae03c84c
 export CLOUDSDK_PYTHON=/opt/homebrew/bin/python3
 export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"
 
+export GOOGLE_OAUTH_CREDENTIALS=/Users/tim/.claude/google-calendar-credentials.json
