@@ -31,9 +31,9 @@ draw_city "kuala lumpur" "$kuala_lumpur_hour" "Asia/Kuala_Lumpur"
 draw_city "tokyo" "$tokyo_hour" "Asia/Tokyo"
 draw_city "sydney" "$sydney_hour" "Australia/Sydney"
 
-# Timeline footer
-echo "                   |--------|--------|--------|--------|"
-echo "                   0        6        12       18       24"
+# Timeline footer (1 char per hour, 24 hours total)
+echo "                   0    6    12   18   24"
+echo "                   |----|----|----|----|"
 echo ""
 echo ""
 echo ""
