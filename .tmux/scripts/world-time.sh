@@ -1,11 +1,8 @@
 #!/bin/bash
 
-# Display current time in multiple timezones
 echo ""
-echo "  🌍 world time"
-echo ""
-echo "  jakarta    🇮🇩  $(TZ=Asia/Jakarta date '+%H:%M %Z')"
-echo "  kuala lumpur 🇲🇾  $(TZ=Asia/Kuala_Lumpur date '+%H:%M %Z')"
-echo "  tokyo      🇯🇵  $(TZ=Asia/Tokyo date '+%H:%M %Z')"
-echo "  sydney     🇦🇺  $(TZ=Australia/Sydney date '+%H:%M %Z')"
+echo "  $(TZ=Asia/Jakarta date '+%H:%M')"
+echo "  $(TZ=Asia/Kuala_Lumpur date '+%H:%M')"
+echo "  $(TZ=Asia/Tokyo date '+%H:%M')"
+echo "  $(TZ=Australia/Sydney date '+%H:%M')"
 echo ""
