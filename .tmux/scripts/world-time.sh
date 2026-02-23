@@ -2,11 +2,12 @@
 
 # Display current time in multiple timezones
 echo ""
-echo "  🌍 WORLD TIME"
+echo "  🌍 world time"
 echo ""
-echo "  Atlanta    🇺🇸  $(TZ=America/New_York date '+%I:%M %p %Z')"
-echo "  Oslo       🇳🇴  $(TZ=Europe/Oslo date '+%H:%M %Z')"
-echo "  Kuala Lumpur 🇲🇾  $(TZ=Asia/Kuala_Lumpur date '+%H:%M %Z')"
-echo "  Tokyo      🇯🇵  $(TZ=Asia/Tokyo date '+%H:%M %Z')"
-echo "  Sydney     🇦🇺  $(TZ=Australia/Sydney date '+%H:%M %Z')"
+echo "  atlanta    🇺🇸  $(TZ=America/New_York date '+%I:%M %p %Z')"
+echo "  oslo       🇳🇴  $(TZ=Europe/Oslo date '+%H:%M %Z')"
+echo "  jakarta    🇮🇩  $(TZ=Asia/Jakarta date '+%H:%M %Z')"
+echo "  kuala lumpur 🇲🇾  $(TZ=Asia/Kuala_Lumpur date '+%H:%M %Z')"
+echo "  tokyo      🇯🇵  $(TZ=Asia/Tokyo date '+%H:%M %Z')"
+echo "  sydney     🇦🇺  $(TZ=Australia/Sydney date '+%H:%M %Z')"
 echo ""
