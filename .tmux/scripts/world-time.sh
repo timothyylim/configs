@@ -2,6 +2,7 @@
 
 # Get hours for each timezone (0-23)
 atlanta_hour=$(TZ=America/New_York date '+%H' | sed 's/^0//')
+oslo_hour=$(TZ=Europe/Oslo date '+%H' | sed 's/^0//')
 jakarta_hour=$(TZ=Asia/Jakarta date '+%H' | sed 's/^0//')
 kuala_lumpur_hour=$(TZ=Asia/Kuala_Lumpur date '+%H' | sed 's/^0//')
 tokyo_hour=$(TZ=Asia/Tokyo date '+%H' | sed 's/^0//')
@@ -22,6 +23,7 @@ draw_city() {
 }
 
 draw_city "atlanta" "$atlanta_hour"
+draw_city "oslo" "$oslo_hour"
 draw_city "jakarta" "$jakarta_hour"
 draw_city "kuala lumpur" "$kuala_lumpur_hour"
 draw_city "tokyo" "$tokyo_hour"
