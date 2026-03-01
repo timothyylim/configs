@@ -10,6 +10,7 @@ while read session; do
     ethstrat) echo "⊙ $session" ;;
     habitat) echo "◈ $session" ;;
     hyperspeed) echo "⚡ $session" ;;
+    oya) echo "◇ $session" ;;
     thibault) echo "⚜ $session" ;;
     totormis) echo "⬢ $session" ;;
     visions) echo "◉ $session" ;;
