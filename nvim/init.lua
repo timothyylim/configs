@@ -13,6 +13,13 @@ require("config.lazy")
 -- Support Mac keyboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Auto-reload files when changed externally (after lazy loads)
+vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI", "FocusGained", "BufEnter" }, {
+  pattern = "*",
+  command = "checktime",
+})
+
 -- Clears highlight after pressing "Enter"
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR><Esc>", { noremap = true, silent = true })
 
@@ -52,13 +59,6 @@ vim.api.nvim_create_user_command('Prose', prose, {})
 local prose_group = vim.api.nvim_create_augroup("prose", { clear = true })
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" },
     { pattern = { "*.md", "*.txt" }, callback = prose, group = prose_group })
-
--- Auto-reload files when changed externally (useful when LLMs are editing files)
-vim.opt.autoread = true
-vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI", "FocusGained", "BufEnter" }, {
-  pattern = "*",
-  command = "checktime",
-})
 
 -- Custom gf for markdown links (resolves relative to file directory)
 vim.keymap.set('n', 'gf', function()
