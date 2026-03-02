@@ -31,6 +31,9 @@ link_config "$CONFIGS_DIR/.zshrc" "$HOME/.zshrc"
 link_config "$CONFIGS_DIR/.tmux.conf" "$HOME/.tmux.conf"
 link_config "$CONFIGS_DIR/.tmux/scripts" "$HOME/.tmux/scripts"
 
+# Screenshot watcher launchd agent
+link_config "$CONFIGS_DIR/scripts/com.tim.watch-screenshots.plist" "$HOME/Library/LaunchAgents/com.tim.watch-screenshots.plist"
+
 # Make tmux scripts executable
 if [[ -d "$CONFIGS_DIR/.tmux/scripts" ]]; then
     chmod +x "$CONFIGS_DIR"/.tmux/scripts/*.sh 2>/dev/null || true
