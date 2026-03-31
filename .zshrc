@@ -185,6 +185,12 @@ p() {
     pomodoro start "$1" -t "${@:2}"
 }
 
+# --- Translation Aliases ---
+# English to Indonesian
+ei() { trans en:id "$*"; }
+# Indonesian to English
+ie() { trans id:en "$*"; }
+
 alias c="claude --continue"
 alias cc="claude"
 alias ls='eza -1'
