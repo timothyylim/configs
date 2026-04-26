@@ -24,3 +24,12 @@ blinking = "Off"
 
 [scrolling]
 history = 10000
+
+[[hints.enabled]]
+command = "open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse = { enabled = true, mods = "Command" }
+binding = { key = "U", mods = "Command" }
+regex = '(https?://|ftp://|file://|mailto:|ssh://|git://|gemini://|gopher://)[^\s"<>]*'
