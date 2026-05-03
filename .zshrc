@@ -22,6 +22,13 @@ export LC_ALL=en_US.UTF-8
 bindkey -v
 export KEYTIMEOUT=1
 
+# Keep block cursor in both vim insert and normal mode
+echo -ne '\e[1 q'
+zle-keymap-select() { echo -ne '\e[1 q'; }
+zle-line-init() { echo -ne '\e[1 q'; }
+zle -N zle-keymap-select
+zle -N zle-line-init
+
 
 # ====================================================================
 # 2. PATH MANAGEMENT
@@ -31,8 +38,8 @@ export KEYTIMEOUT=1
 # Standard system paths
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
-# Homebrew paths (use 'brew --prefix' for dynamically adding install paths)
-export PATH="/opt/homebrew/bin:$(brew --prefix)/bin:$PATH"
+# Homebrew paths
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # --- Tool-Specific Paths ---
 # Go path
@@ -93,11 +100,16 @@ zstyle ':vcs_info:git:*' formats '%b '
 COLOR_DEF=$'%f'   # Default color reset
 COLOR_USR=$'%F{243}' # Dark gray
 COLOR_DIR=$'%F{197}' # Pink/Magenta for current directory
-COLOR_GIT=$'%F{39}'  # Blue for git branch
+COLOR_GIT=$'%F{208}'  # Orange for git branch
 
-# Function to add an empty line before the prompt
+# Function to add an empty line before the prompt (skip on first prompt)
+_first_prompt=1
 prompt_newline() {
-    print -P ''
+    if [[ -n $_first_prompt ]]; then
+        unset _first_prompt
+    else
+        print -P ''
+    fi
 }
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd prompt_newline
@@ -149,6 +161,7 @@ alias changkat='v /Users/tim/repos/writing/changkat/content/posts'
 alias diary='${EDITOR} ~/repos/notes/diary-$(date +%Y-%m-%d).md'
 alias scratch='${EDITOR} ~/repos/scratch/$(date +%Y-%m-%d).md'
 alias todo='cd ~/repos/visions; ${EDITOR} todo.md'
+alias today='nvim ~/repos/visions/dashboard/content/logs/$(date +%Y-%m-%d).md'
 
 # --- Git Aliases ---
 alias ga='git add'
@@ -200,6 +213,7 @@ alias lssss='eza --tree --level=3'
 alias tt='~/.config/alacritty/toggle-theme.sh'
 alias tt='~/.config/alacritty/toggle-theme.sh'
 alias tn='tmux new-window'
+alias arrakis='TERM=xterm-256color ssh -t arrakis "tmux attach 2>/dev/null || tmux new-session"'
 
 # --- Functions ---
 
@@ -272,3 +286,6 @@ export CLOUDSDK_PYTHON=/opt/homebrew/bin/python3
 export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"
 
 export GOOGLE_OAUTH_CREDENTIALS=/Users/tim/.claude/google-calendar-credentials.json
+
+# 1Password service account token - loaded from file, never hardcoded
+[ -f ~/.secrets/op-token ] && export OP_SERVICE_ACCOUNT_TOKEN="$(cat ~/.secrets/op-token)"
