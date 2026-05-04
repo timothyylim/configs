@@ -1,0 +1,29 @@
+Host arrakis
+    HostName 168.144.107.250
+    User tim
+    ControlMaster auto
+    ControlPath ~/.ssh/cm-%r@%h:%p
+    ControlPersist 10m
+
+Host github-repo1
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+
+Host git.noerve.com
+    HostName git.noerve.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+
+Host github-repo2
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_adamsmith
+    IdentitiesOnly yes
+
+Host github-topia
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_github
+    IdentitiesOnly yes

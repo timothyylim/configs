@@ -1,0 +1,25 @@
+[user]
+   name = timothyylim
+   email = timothylim23@gmail.com
+	signingkey = FC712D5B87B8D966A6E4950604066D1F52241025
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[pull]
+	rebase = true
+
+[includeIf "gitdir:/Users/tim/repos/ethstrat/landing-page"]
+    path = ~/.gitconfigs/repo2.gitconfig
+
+[includeIf "gitdir:/Users/tim/repos/ethstrat/dapp"]
+    path = ~/.gitconfigs/repo2.gitconfig
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential

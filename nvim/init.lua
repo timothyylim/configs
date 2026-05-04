@@ -1,5 +1,5 @@
 -- Enable folding with manual method
-vim.opt.foldenable = true
+vim.opt.foldenable = false
 vim.opt.foldmethod = "manual"
 vim.g.vim_markdown_folding = 0
 
