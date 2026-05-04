@@ -12,8 +12,8 @@
     "error": "#8b1a0a",
     "warning": "#f5a623",
     "merged": "#d4622a",
-    "promptBorder": "#3d1f10",
-    "promptBorderShimmer": "#3d1f10",
+    "promptBorder": "#1a0f0a",
+    "promptBorderShimmer": "#1a0f0a",
     "planMode": "#c45020",
     "autoAccept": "#5a3020",
     "bashBorder": "#7a3820",
@@ -36,7 +36,7 @@
     "muted": "#7a4030",
     "inverseText": "#e8643a",
     "cwd": "#c4643a",
-    "statusline": "#3d1f10",
-    "statusLine": "#3d1f10"
+    "statusline": "#d4622a",
+    "statusLine": "#d4622a"
   }
 }
