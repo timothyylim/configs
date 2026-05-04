@@ -18,6 +18,14 @@ setopt HIST_IGNORE_DUPS
 # Set locale for consistent behavior
 export LC_ALL=en_US.UTF-8
 
+# tmux exposes TERM=tmux-256color to apps. Do not let Ghostty's TERMINFO
+# override hide the user tmux terminfo entry that advertises truecolor.
+if [[ -n "$TMUX" ]]; then
+    unset TERMINFO
+    export COLORTERM=truecolor
+    export FORCE_COLOR=3
+fi
+
 # Vim mode for command line editing
 bindkey -v
 export KEYTIMEOUT=1
