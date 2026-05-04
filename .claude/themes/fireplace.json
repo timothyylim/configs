@@ -36,7 +36,7 @@
     "muted": "#7a4030",
     "inverseText": "#e8643a",
     "cwd": "#c4643a",
-    "statusline": "#d4622a",
-    "statusLine": "#d4622a"
+    "statusline": "#3d1f10",
+    "statusLine": "#3d1f10"
   }
 }
